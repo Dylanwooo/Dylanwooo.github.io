@@ -99,7 +99,7 @@
             <!-- icons 图标   -->
 			<ul class="icons">
 		            
-		                <li><a href="https://github.com/miccall" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		                <li><a href="https://github.com/Dylanwooo" class="icon fa-github"><span class="label">GitHub</span></a></li>
 		            
 		            
 		            
@@ -109,19 +109,46 @@
 
         <div id="main" >
             <div class ="post_page_title_img" style="height: 25rem;background-image: url(undefined);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
-                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >Hello World</h2></a>
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >第一篇博客——GitHub+hexo(v3)博客搭建</h2></a>
             </div>
             <!-- Post -->
             <div class="typo" style="padding: 3rem;">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+                <p>使用 GitHub pages+hexo 搭建了自己的博客，不得不说hexo是个强大的工具，提供了非常方便的博客编写和管理功能。网上有非常多的hexo搭建个人博客教程，但是很多没有注明node版本问题，导致不能正确安装hexo。本文记录一些本人的踩坑过程，希望对大家有用</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><ul>
+<li>本文针对的是Windows用户</li>
+</ul>
+<h2 id="安装Git和Node-js"><a href="#安装Git和Node-js" class="headerlink" title="安装Git和Node.js"></a>安装Git和Node.js</h2><ul>
+<li>Git 这里我安装的是最新版的</li>
+<li><p>Node.js 这里按照官网推荐的nvm来安装node，此处参考博文：<a href="http://bubkoo.com/2017/01/08/quick-tip-multiple-versions-node-nvm/" target="_blank" rel="external">http://bubkoo.com/2017/01/08/quick-tip-multiple-versions-node-nvm/</a></p>
+<p>这里我是踩过坑的，刚开始安装了node的v8（最新）版本，后来hexo的安装死活都报错，最后安装了LTS版本（v6）才成功，这是因为npm的版本问题造成的</p>
+<p>如下是我的node和npm版本：<br><img src="../img/version.jpg" alt="Alt text"></p>
+</li>
+</ul>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div></pre></td></tr></table></figure>
+<p> 接下来进入到你想放置博客工程的目录，在此创建你的博客工程MyBlog。右键点击鼠标，选择Git Bash Here，执行以下命令行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm init MyBlog</div><div class="line">$ <span class="built_in">cd</span> MyBlog</div></pre></td></tr></table></figure>
+<p> 安装相关依赖包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<p> 执行 hexo g 用于文件生成后立即部署网站；hexo s用于启动服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g </div><div class="line">$ hexo s</div></pre></td></tr></table></figure>
+<p> 官方文档说的是访问<a href="http://localhost:4000/能看到本地搭建好的博客，但是这里还有一个问题，如果你的4000端口被占用，则页面会一直停留在加载状态。所以，如果http://localhost:4000/不能打开，可以试着更改端口(比如4001)，将hexo" target="_blank" rel="external">http://localhost:4000/能看到本地搭建好的博客，但是这里还有一个问题，如果你的4000端口被占用，则页面会一直停留在加载状态。所以，如果http://localhost:4000/不能打开，可以试着更改端口(比如4001)，将hexo</a> s改成：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server -p 4001</div></pre></td></tr></table></figure>
+<p> 然后就应该可以看到本地部署情况了</p>
+<h2 id="创建Github账号，配置SSH"><a href="#创建Github账号，配置SSH" class="headerlink" title="创建Github账号，配置SSH"></a>创建Github账号，配置SSH</h2><p> 具体创建过网上有很多教程，在此不过多叙述（注意，配置SSH很重要，不然后面可能运行不通过）。</p>
+<h2 id="创建repository"><a href="#创建repository" class="headerlink" title="创建repository"></a>创建repository</h2><p>  repository就是一个仓库，用于放置工程的代码文件。注意，repository name填写的时候需以<em>youname.github.io</em>格式命名，youname为你的GitHub用户名</p>
+<h2 id="部署本地文件到GitHub"><a href="#部署本地文件到GitHub" class="headerlink" title="部署本地文件到GitHub"></a>部署本地文件到GitHub</h2><p>打开博客文件中的_config.yml文件，拉到最下方，在deploy处修改配置参数，其中repository要根据自己的地址做修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repository: git@github.com:Dylanwooo/Dylanwooo.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<p> 接着执行下面两个命令，若要求输入用户名和密码，按要求输入即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure>
+<p> 至此，博客就已经搭建起来了，并且发布到GitHub上面，在浏览器中访问<a href="https://dylanwooo.github.io/" target="_blank" rel="external">https://dylanwooo.github.io/</a> 便可看到自己的博客了</p>
+<h2 id="相关配置"><a href="#相关配置" class="headerlink" title="相关配置"></a>相关配置</h2><p> hexo提供了自定义的相关配置可在_config.yml文件中进行配置，具体可看官网资料</p>
+<p> hexo提供了许多博客主题可供使用（<a href="https://hexo.io/themes/）" target="_blank" rel="external">https://hexo.io/themes/）</a></p>
+<p> 另外注意一点，在配置完成后可能需要清除缓存处理（加入你发现对站点做更改后怎么刷新都不改变的话使用此方法）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div></pre></td></tr></table></figure>
+<p> 然后再次部署</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div><div class="line">$ hexo d</div></pre></td></tr></table></figure>
+<p> 最后再刷新页面就可看到修改后的结果了</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">http://opiece.me/2015/04/09/hexo-guide/</a><br><a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">使用Hexo搭建个人博客(基于hexo3.0)</a></p>
 
             </div>
 
