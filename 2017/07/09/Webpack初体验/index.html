@@ -115,6 +115,20 @@
             <div class="typo" style="padding: 3rem;">
                 <p> 最近学习webpack，主要参考官方文档。本文介绍了如何使用webpack打包一个项目的基本过程</p>
 <a id="more"></a>
+<h3 id="基本介绍："><a href="#基本介绍：" class="headerlink" title="基本介绍："></a>基本介绍：</h3><p> webpack版本：v3</p>
+<p> 官方文档（中文）地址：<a href="https://doc.webpack-china.org/" target="_blank" rel="external">https://doc.webpack-china.org/</a></p>
+<p> 这里命令行工具使用的是cmder（<a href="http://cmder.net/" target="_blank" rel="external">http://cmder.net/</a>  Windows用户可以考虑使用这个，毕竟写代码时命令行的颜值也挺重要）</p>
+<p> 在文件夹创建一个空文件夹存放webpack demo，例如webpack-demo。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ mkdir react-demo &amp;&amp; <span class="built_in">cd</span> react-demo</div></pre></td></tr></table></figure>
+<h2 id="基本安装"><a href="#基本安装" class="headerlink" title="基本安装"></a>基本安装</h2><p> 第一条命令进行初始化，生成package.json文件；第二条命令安装webpack，生成node_modules文件，包含所有的依赖包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm init -y</div><div class="line">$ npm install --save-dev webpack</div></pre></td></tr></table></figure>
+<p> 这时应该能看到webpack-demo目录下有两个东西生成: node_modules和package.json</p>
+<p> 现在我们将创建以下目录结构和内容：</p>
+<p>   webpack-demo<br>      |- package.json</p>
+<pre><code>+ |- index.html
++ |- /src
++   |- index.js
+</code></pre>
             </div>
 
             <!-- Post Comments -->
