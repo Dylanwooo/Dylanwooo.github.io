@@ -5,6 +5,9 @@
 <p> 这里命令行工具使用的是cmder（<a href="http://cmder.net/" target="_blank" rel="external">http://cmder.net/</a>  Windows用户可以考虑使用这个，毕竟写代码时命令行的颜值也挺重要）</p>
 <p> 在文件夹创建一个空文件夹存放webpack demo，例如webpack-demo。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ mkdir react-demo &amp;&amp; <span class="built_in">cd</span> react-demo</div></pre></td></tr></table></figure>
+<h2 id="0-什么是webpack，能干什么"><a href="#0-什么是webpack，能干什么" class="headerlink" title="0. 什么是webpack，能干什么"></a>0. 什么是webpack，能干什么</h2><p>  Webpack可以看做是一个模块打包机，它所做的事情是：分析你的项目结构，找到JavaScript模块以及其他的浏览器不能执行的拓展语言（如SASS,Typescript），并将其装换为合适的格式供浏览器使用。它的工作方式简单来说：把项目当做一个整体，通过一个给定的文件入口（如index.js），webpack将从这个文件开始找到项目的所有依赖文件，使用loaders处理它们，然后打包为一个（或多个）浏览器可识别的JavaScript文件。</p>
+<p>  引用官方文档中的工作流程图：</p>
+<p>   <img src="/img/webpack.png" alt=""></p>
 <h2 id="1-基本安装"><a href="#1-基本安装" class="headerlink" title="1. 基本安装"></a>1. 基本安装</h2><p> 第一条命令进行初始化，生成package.json文件；第二条命令安装webpack，生成node_modules文件，包含所有的依赖包</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ npm init -y</div><div class="line">$ npm install --save-dev webpack</div></pre></td></tr></table></figure>
 <p> 这时应该能看到webpack-demo目录下有两个东西生成: node_modules和package.json</p>
